@@ -6,7 +6,6 @@ const sidebarMenu = document.getElementById('sidebar-menu');
 const sidebarBasket = document.getElementById('sidebar-basket');
 const overlay = document.getElementById('overlay');
 
-
 function openSidebar(sidebar) {
     closeAllSidebars();
     sidebar.classList.add('open');
@@ -14,6 +13,8 @@ function openSidebar(sidebar) {
     overlay.classList.add('open');
     overlay.classList.remove('hidden');
 }
+
+
 function closeAllSidebars() {
     document.querySelectorAll('.sidebar').forEach(sidebar => {
         sidebar.classList.remove('open');
@@ -23,6 +24,7 @@ function closeAllSidebars() {
     overlay.classList.add('hidden');
 }
 
+
 listBtn.addEventListener('click', () => openSidebar(sidebarMenu));
 basketBtn.addEventListener('click', () => openSidebar(sidebarBasket));
 
@@ -31,8 +33,10 @@ closeBtns.forEach(btn => {
     btn.addEventListener('click', closeAllSidebars);
 });
 
-
 overlay.addEventListener('click', closeAllSidebars);
+
+
+
 
 
 
