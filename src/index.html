@@ -12,34 +12,47 @@
         <nav class="container max-w-[1280px] mx-auto pt-[20px] pl-[16px] pr-[16px] pb-[20px] flex items-center justify-between">
             <img class="w-[51.2px] h-[51.2px]" src="../images/res-logo.png" alt="logo">
             <ul class="hidden md:flex items-center gap-5">
-                <li><a class="text-[#df2020] text-[16px] ease-in duration-300  font-semibold  hover:text-[#2096df]" href="#">Home</a></li>
-                <li><a class="text-[#212245] text-[16px] ease-in duration-300  font-semibold hover:text-[#2096df]" href="#">Foods</a></li>
-                <li><a class="text-[#212245] text-[16px] ease-in duration-300  font-semibold hover:text-[#2096df]" href="#">Cart</a></li>
-                <li><a class="text-[#212245] text-[16px] ease-in duration-300  font-semibold hover:text-[#2096df]" href="#">Contact</a></li>
+                <li><a class="text-[#df2020] text-[16px] ease-in duration-300 font-semibold hover:text-[#2096df]" href="#">Home</a></li>
+                <li><a class="text-[#212245] text-[16px] ease-in duration-300 font-semibold hover:text-[#2096df]" href="#">Foods</a></li>
+                <li><a class="text-[#212245] text-[16px] ease-in duration-300 font-semibold hover:text-[#2096df]" href="#">Cart</a></li>
+                <li><a class="text-[#212245] text-[16px] ease-in duration-300 font-semibold hover:text-[#2096df]" href="#">Contact</a></li>
             </ul>
             <div class="flex items-center gap-4">
-                <img src="../images/basket.svg" alt="basket">
-                <img src="../images/user.svg" alt="user">
+                <img id="basket" src="../images/basket.svg" alt="basket">
+                <img id="user" src="../images/user.svg" alt="user">
                 <img id="list" class="block md:hidden cursor-pointer" src="../images/list.svg" alt="menu">
             </div>
         </nav>
     </header>
-    <div id="sidebar" class="fixed top-0 max-w-[1280px] mx-auto right-[-300px] w-[300px] h-full bg-white shadow-lg transition-transform transform translate-x-full">
-        <div class="flex flex-col items-center  h-full">
-            <img src="../images/x-lg.svg" alt="close"  id="closebtn" class="cursor-pointer mt-[20px] ml-[-240px]">
-            <div class="flex items-center mt-[150px] gap-10 flex-col mb-6" id="sidebartytle">
-                <a class="text-[#df2020] text-[16px] font-semibold hover:text-[#2096df]" href="#">Home</a>
-                <a class="text-[#212245] text-[16px] font-semibold hover:text-[#2096df]" href="#">Foods</a>
-                <a class="text-[#212245] text-[16px] font-semibold hover:text-[#2096df]" href="#">Contact</a>
-                <a class="text-[#212245] text-[16px] font-semibold hover:text-[#2096df]" href="#">Cart</a>
+    <div id="sidebar-menu" class="sidebar hidden">
+        <div class="sidebar-content">
+            <img src="../images/x-lg.svg" alt="close" class="closebtn">
+            <div class="flex items-center gap-10 flex-col mb-6">
+                <a class="text-[#212245] text-[16px] font-semibold hover:text-[#2096df]" href="#">Home</a>
+                <a class="text-[#212245] text-[16px] font-semibold hover:text-[#2096df]" href="#">Properties</a>
+                <a class="text-[#212245] text-[16px] font-semibold hover:text-[#2096df]" href="#">Contacts</a>
             </div>
-            <div class="flex items-center gap-4" id="sidebartext">
+            <div class="flex items-center gap-4">
                 <img src="../images/instagram.svg" alt="Instagram">
                 <img src="../images/linkidin.svg" alt="LinkedIn">
                 <img src="../images/facebook.svg" alt="Facebook">
             </div>
         </div>
     </div>
+    <div id="sidebar-basket" class="sidebar hidden">
+        <div class="sidebar-content">
+            <img src="../images/x-lg.svg" alt="close" class="closebtn">
+            <div class="flex flex-col items-center gap-10">
+                <h2 class="text-[#212245] text-[20px] font-semibold">Basket</h2>
+                <p>Your basket is empty</p>
+            </div>
+        </div>
+    </div>
+    <div id="overlay" class="hidden overlay"></div>
     <script src="../script/app.js"></script>
 </body>
 </html>
+
+
+
+
